@@ -1,12 +1,9 @@
-
 import 'package:flight_appointment/core/utils/app_colors.dart';
 import 'package:flight_appointment/core/utils/fonts_styles.dart';
 import 'package:flutter/material.dart';
 
 class CustomSearchFlightButtom extends StatelessWidget {
-  const CustomSearchFlightButtom({
-    super.key,
-  });
+  const CustomSearchFlightButtom({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +14,7 @@ class CustomSearchFlightButtom extends StatelessWidget {
           shape: ContinuousRectangleBorder(
             borderRadius: BorderRadius.circular(20),
           ),
-          backgroundColor: AppColors.backgroundColor,
+          backgroundColor: AppColors.buttonColor,
         ),
         onPressed: () {},
         child: Row(
@@ -25,7 +22,10 @@ class CustomSearchFlightButtom extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Icon(Icons.search_outlined, size: 30, color: Colors.black),
-            Text('Search Flight', style: FontsStyles.buttonText25),
+            Text(
+              'Search Flight',
+              style: FontsStyles.buttonText25.copyWith(color: Colors.white),
+            ),
           ],
         ),
       ),

@@ -27,7 +27,7 @@ class HomeViewBody extends StatelessWidget {
                     Text(
                       'Departure',
                       style: FontsStyles.fontStyles20.copyWith(
-                        color: AppColors.deepBlue,
+                        color:  AppColors.textColor,
                       ),
                     ),
                     Text(
@@ -46,7 +46,7 @@ class HomeViewBody extends StatelessWidget {
                     Text(
                       'Return',
                       style: FontsStyles.fontStyles20.copyWith(
-                        color: AppColors.deepBlue,
+                        color: AppColors.textColor,
                       ),
                     ),
                     Text(

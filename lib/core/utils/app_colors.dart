@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 
 abstract class AppColors {
-  static Color primaryColor = Color(0XFF00B4D8);
-  static Color secondaryColor = Color(0xff90E0EF);
-  static Color backgroundColor = Color(0xffCAF0F8);
-  static Color deepBlue = Color(0xff03045E);
-  static Color blue = Color(0xff0077B6);
+  static Color primaryColor = Color(0xffFAF1E6);
+  static Color secondaryColor = Color(0xffFDFAF6);
+  static Color backgroundColor = Color(0xffF1EFEC);
+  static Color containerColor = Color(0xffD4C9BE);
+  static Color appBarColor = Color(0xff123458);
+  static Color textColor = Color(0xff030303);
+  static Color buttonColor = Color(0xff123458);
 }

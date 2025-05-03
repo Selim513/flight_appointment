@@ -25,7 +25,9 @@ class LocationSelectionBody extends StatelessWidget {
           },
           child: Text(
             'LEAVING FROM',
-            style: FontsStyles.fontStyles20.copyWith(color: Colors.white),
+            style: FontsStyles.fontStyles20.copyWith(
+              fontWeight: FontWeight.bold,
+            ),
           ),
         ),
         Divider(color: AppColors.secondaryColor),
@@ -42,7 +44,9 @@ class LocationSelectionBody extends StatelessWidget {
 
           child: Text(
             'GOING TO',
-            style: FontsStyles.fontStyles20.copyWith(color: Colors.white),
+            style: FontsStyles.fontStyles20.copyWith(
+              fontWeight: FontWeight.bold,
+            ),
           ),
         ),
       ],

@@ -14,7 +14,7 @@ class CustomSecondaryContainer extends StatelessWidget {
     return Container(
       padding: EdgeInsets.all(padding),
       decoration: BoxDecoration(
-        color: AppColors.blue,
+        color: AppColors.containerColor,
         borderRadius: BorderRadius.circular(15),
       ),
       child: widget,
