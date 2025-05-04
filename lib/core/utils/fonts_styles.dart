@@ -1,3 +1,4 @@
+import 'package:flight_appointment/core/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 
 abstract class FontsStyles {
@@ -15,8 +16,12 @@ abstract class FontsStyles {
     fontSize: 30,
   );
   static TextStyle buttonText25 = TextStyle(
-    color: Colors.black,
+    color: AppColors.backgroundColor,
     fontSize: 25,
+    fontWeight: FontWeight.bold,
+  );
+  static TextStyle appBarText = TextStyle(
+    fontSize: 30,
     fontWeight: FontWeight.bold,
   );
 }

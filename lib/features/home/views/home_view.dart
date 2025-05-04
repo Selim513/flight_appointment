@@ -1,4 +1,4 @@
-import 'package:flight_appointment/core/widgets/peimaey_app_bar.dart';
+import 'package:flight_appointment/core/widgets/primary_app_bar.dart';
 import 'package:flight_appointment/features/home/views/widgets/home_view_body.dart';
 import 'package:flutter/material.dart';
 

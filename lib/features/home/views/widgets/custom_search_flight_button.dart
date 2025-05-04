@@ -1,5 +1,6 @@
 import 'package:flight_appointment/core/utils/app_colors.dart';
 import 'package:flight_appointment/core/utils/fonts_styles.dart';
+import 'package:flight_appointment/features/search/presentation/views/search_view.dart';
 import 'package:flutter/material.dart';
 
 class CustomSearchFlightButtom extends StatelessWidget {
@@ -16,16 +17,22 @@ class CustomSearchFlightButtom extends StatelessWidget {
           ),
           backgroundColor: AppColors.buttonColor,
         ),
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => SearchView()),
+          );
+        },
         child: Row(
           spacing: 10,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(Icons.search_outlined, size: 30, color: Colors.black),
-            Text(
-              'Search Flight',
-              style: FontsStyles.buttonText25.copyWith(color: Colors.white),
+            Icon(
+              Icons.search_outlined,
+              size: 30,
+              color: AppColors.backgroundColor,
             ),
+            Text('Search Flight', style: FontsStyles.buttonText25),
           ],
         ),
       ),
