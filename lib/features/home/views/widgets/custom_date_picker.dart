@@ -1,5 +1,4 @@
-import 'package:flight_appointment/core/utils/app_colors.dart';
-import 'package:flight_appointment/core/utils/fonts_styles.dart';
+import 'package:flight_appointment/features/home/views/widgets/custom_column_date_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -52,56 +51,14 @@ class _CustomDatePickerBodyState extends State<CustomDatePickerBody> {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        CustomColumDatePicker(),
+        CustomColumnDatePicker(
+          onTap: () => _selectDate(context, true),
+          selectDate: getFormattedDate(departureDate),
+        ),
         Spacer(),
-        Column(
-          spacing: 5,
-          children: [
-            Text(
-              'Return',
-              style: FontsStyles.fontStyles20.copyWith(
-                color: AppColors.textColor,
-              ),
-            ),
-            GestureDetector(
-              onTap: () => _selectDate(context, false),
-              child: Text(
-                getFormattedDate(returnDate),
-                style: FontsStyles.fontStyles25.copyWith(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-          ],
-        ),
-      ],
-    );
-  }
-}
-
-class CustomColumDatePicker extends StatelessWidget {
-  const CustomColumDatePicker({super.key, required this.selectDate, this.onTap});
-  final String selectDate;
-final void Function()? onTap;
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      spacing: 5,
-      children: [
-        Text(
-          'Departure',
-          style: FontsStyles.fontStyles20.copyWith(color: AppColors.textColor),
-        ),
-        GestureDetector(
-          onTap:onTap ,
-          child: Text(
-           selectDate, // getFormattedDate(departureDate),
-            style: FontsStyles.fontStyles25.copyWith(
-              color: Colors.white,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
+        CustomColumnDatePicker(
+          onTap: () => _selectDate(context, false),
+          selectDate: getFormattedDate(returnDate),
         ),
       ],
     );
