@@ -52,27 +52,7 @@ class _CustomDatePickerBodyState extends State<CustomDatePickerBody> {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Column(
-          spacing: 5,
-          children: [
-            Text(
-              'Departure',
-              style: FontsStyles.fontStyles20.copyWith(
-                color: AppColors.textColor,
-              ),
-            ),
-            GestureDetector(
-              onTap: () => _selectDate(context, true),
-              child: Text(
-                getFormattedDate(departureDate),
-                style: FontsStyles.fontStyles25.copyWith(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-          ],
-        ),
+        CustomColumDatePicker(),
         Spacer(),
         Column(
           spacing: 5,
@@ -94,6 +74,34 @@ class _CustomDatePickerBodyState extends State<CustomDatePickerBody> {
               ),
             ),
           ],
+        ),
+      ],
+    );
+  }
+}
+
+class CustomColumDatePicker extends StatelessWidget {
+  const CustomColumDatePicker({super.key, required this.selectDate, this.onTap});
+  final String selectDate;
+final void Function()? onTap;
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      spacing: 5,
+      children: [
+        Text(
+          'Departure',
+          style: FontsStyles.fontStyles20.copyWith(color: AppColors.textColor),
+        ),
+        GestureDetector(
+          onTap:onTap ,
+          child: Text(
+           selectDate, // getFormattedDate(departureDate),
+            style: FontsStyles.fontStyles25.copyWith(
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
         ),
       ],
     );
