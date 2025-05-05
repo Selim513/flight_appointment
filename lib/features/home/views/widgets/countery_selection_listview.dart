@@ -1,8 +1,8 @@
 import 'package:flight_appointment/features/home/views/widgets/selection_listview_body.dart';
 import 'package:flutter/material.dart';
 
-class LocationSelectionListView extends StatelessWidget {
-  const LocationSelectionListView({super.key});
+class CounterySelectionListView extends StatelessWidget {
+  const CounterySelectionListView({super.key});
 
   @override
   Widget build(BuildContext context) {

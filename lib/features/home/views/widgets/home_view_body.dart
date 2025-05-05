@@ -15,7 +15,7 @@ class HomeViewBody extends StatelessWidget {
         spacing: 50,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Lottie.asset('assets/lottie/home_flight.json'),
+          Lottie.asset('assets/lottie/home_flight.json', animate: false),
           LocationSelectionSection(),
           FlightDatePickerSection(),
           CustomSearchFlightButtom(),

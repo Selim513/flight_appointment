@@ -1,5 +1,6 @@
 import 'package:flight_appointment/core/utils/app_colors.dart';
 import 'package:flight_appointment/core/utils/fonts_styles.dart';
+import 'package:flight_appointment/core/utils/naviagtor_services.dart';
 import 'package:flight_appointment/features/home/views/countery_selection.dart';
 import 'package:flutter/material.dart';
 
@@ -14,13 +15,9 @@ class LocationSelectionBody extends StatelessWidget {
       children: [
         GestureDetector(
           onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder:
-                    (context) =>
-                        LocationSelectionView(appBarName: 'Leaving from'),
-              ),
+            AppNaviagtorServices.gotoPush(
+              context: context,
+              screen: CounterySelectionView(appBarName: 'Leaving From'),
             );
           },
           child: Text(
@@ -33,12 +30,9 @@ class LocationSelectionBody extends StatelessWidget {
         Divider(color: AppColors.secondaryColor),
         GestureDetector(
           onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder:
-                    (context) => LocationSelectionView(appBarName: 'Going to'),
-              ),
+            AppNaviagtorServices.gotoPush(
+              context: context,
+              screen: CounterySelectionView(appBarName: 'Going To'),
             );
           },
 
